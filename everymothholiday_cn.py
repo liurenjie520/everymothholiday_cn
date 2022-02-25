@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Fetch holidays from gov.cn  """
+import log
 
 import argparse
 import json
@@ -109,6 +110,7 @@ if __name__ == '__main__':
         # content = requests.post(url=url, data=FormData).text
 
         print(res.text)
+        log.info(res.text)
 
 
 

@@ -19,5 +19,14 @@ jobs:
         run: pip install -r requirements.txt
       - name: '开始运行'
         run: python everymothholiday_cn.py 
+      - name: commit
+        run: |
+          git config --local user.email "zhansan@gmail.com"
+          git config --local user.name "zhansam"
+          git add .
+          git commit -m "`date '+%Y-%m-%d %H:%M:%S'`" 
      
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
       
